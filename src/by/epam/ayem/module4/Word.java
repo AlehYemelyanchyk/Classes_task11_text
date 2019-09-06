@@ -1,19 +1,21 @@
+package by.epam.ayem.module4;
+
 /*1. Создать объект класса Текст, используя классы Предложение, Слово. Методы: дополнить текст,
 вывести на консоль текст, заголовок текста.*/
 
-public class Sentence {
+public class Word {
 
-    private Word[] sentence;
+    private String word;
 
-    public Sentence(Word... word) {
-        this.sentence = word;
+    public Word(String word) {
+        this.word = word;
     }
 
-    public Word[] getSentence() {
-        return sentence;
+    public String getWord() {
+        return word;
     }
 
-    public void setSentence(Word[] sentence) {
-        this.sentence = sentence;
+    public void setWord(String word) {
+        this.word = word;
     }
 }

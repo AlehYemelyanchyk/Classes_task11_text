@@ -1,7 +1,9 @@
+package by.epam.ayem.module4;
+
 /*1. Создать объект класса Текст, используя классы Предложение, Слово. Методы: дополнить текст,
 вывести на консоль текст, заголовок текста.*/
 
-public class TextMain {
+public class AppRunner {
 
     public static void main(String[] args) {
         Word word1 = new Word("This");
@@ -14,8 +16,9 @@ public class TextMain {
         Sentence sentence1 = new Sentence(word4, word5, word6, word7);
         Sentence sentence2 = new Sentence(word1, word2, word3);
         Text text = new Text("My title", sentence1, sentence2);
-        text.addText(new Word("Or"), new Word("maybe"), new Word("not"));
-        text.printText();
+        TextMaker textMaker = new TextMaker(text);
+        textMaker.addText(new Word("Or"), new Word("maybe"), new Word("not"));
+        textMaker.printText();
 
     }
 }
