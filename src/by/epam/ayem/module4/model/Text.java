@@ -1,19 +1,19 @@
-package by.epam.ayem.module4;
+package by.epam.ayem.module4.model;
 
 /*1. Создать объект класса Текст, используя классы Предложение, Слово. Методы: дополнить текст,
 вывести на консоль текст, заголовок текста.*/
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Text {
 
-    private String title = "No title";
-    private Sentence[] text;
+    private String title;
+    private final List<Sentence> sentences;
 
-    public Text() {
-    }
-
-    public Text(String title, Sentence... sentences) {
+    public Text(String title) {
         this.title = title;
-        this.text = sentences;
+        sentences = new ArrayList<>();
     }
 
     public String getTitle() {
@@ -24,11 +24,7 @@ public class Text {
         this.title = title;
     }
 
-    public Sentence[] getText() {
-        return text;
-    }
-
-    public void setText(Sentence[] text) {
-        this.text = text;
+    public List<Sentence> getSentences() {
+        return sentences;
     }
 }
